@@ -1,15 +1,16 @@
+import type { MouseEventHandler } from 'react';
 import React from 'react';
 import './button.scss';
 
 export type ButtonProps = {
-    action: (e: any) => void;
-    label: string;
+  action: MouseEventHandler<HTMLButtonElement>;
+  label: string;
 };
 
-export const Button = (props: ButtonProps) => (
-    <button className="icbs-button" onClick={props.action}>
-        {props.label}
-    </button>
+export const Button = ({ action, label }: ButtonProps) => (
+  <button type="button" className="icbs-button" onClick={action}>
+    {label}
+  </button>
 );
 
 export default Button;
