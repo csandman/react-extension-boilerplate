@@ -142,6 +142,7 @@ out
 .nuxt
 dist
 temp
+dev
 
 # Gatsby files
 .cache/
