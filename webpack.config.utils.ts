@@ -99,6 +99,15 @@ export const getHTMLPlugins = (
     template: path.resolve(__dirname, `${sourceDir}/popup/index.html`),
     chunks: ['popup'],
   }),
+  new HtmlWebpackPlugin({
+    title: 'Options',
+    filename: path.resolve(
+      __dirname,
+      `${outputDir}/${browserDir}/options/index.html`,
+    ),
+    template: path.resolve(__dirname, `${sourceDir}/options/index.html`),
+    chunks: ['options'],
+  }),
 ];
 
 /**
